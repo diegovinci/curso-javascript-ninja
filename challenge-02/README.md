@@ -40,7 +40,7 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-function myFunction(n1, n2, n3) {
+function myFunction( n1, n2, n3 ) {
     if( n1 === undefined || n2 === undefined || n3 === undefined ) {
         return 'Preencha todos os valores corretamente!';
     } else {
@@ -72,13 +72,17 @@ Crie uma função com as seguintes características:
 function myFunction2(n1, n2, n3) {
     if( n1 !== undefined && n2 === undefined && n3 === undefined ) {
         return n1;
-    } else if( n1 !== undefined && n2 !== undefined && n3 === undefined ) {
+    } 
+    else if( n1 !== undefined && n2 !== undefined && n3 === undefined ) {
         return n1 + n2;
-    } else if( n1 !== undefined && n2 !== undefined && n3 !== undefined ) {
+    } 
+    else if( n1 !== undefined && n2 !== undefined && n3 !== undefined ) {
         return ( n1 + n2 ) / n3;
-    } else if ( n1 === undefined && n2 === undefined && n3 === undefined) {
+    } 
+    else if( n1 === undefined && n2 === undefined && n3 === undefined) {
         return false;
-    } else {
+    } 
+    else {
         return null;
     }
 }
