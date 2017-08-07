@@ -30,7 +30,7 @@ isTrythy(1000);
 isTruthy(-1);
 isTrythy(-1000);
 isTruthy("string com aspas duplas");
-isTruthy('string com aspas simples");
+isTruthy('string com aspas simples');
 isTruthy(Number);
 isTruthy(String);
 isTruthy(Boolean);
