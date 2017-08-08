@@ -9,7 +9,7 @@ para o contrário.
 */
 var isTruthy = function(x) {
   return !!x;
-}
+};
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
 isTruthy(false);
@@ -26,14 +26,18 @@ Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
 isTruthy(true);
 isTruthy(1);
-isTrythy(1000);
+isTruthy(1000);
 isTruthy(-1);
-isTrythy(-1000);
+isTruthy(-1000);
+isTruthy(20 * 30);
 isTruthy("string com aspas duplas");
 isTruthy('string com aspas simples');
 isTruthy(Number);
 isTruthy(String);
 isTruthy(Boolean);
+isTruthy([]);
+isTruthy({});
+isTruthy(function() {});
 
 /*
 Declare uma variável chamada `carro`, atribuindo à ela um objeto com as
@@ -93,7 +97,7 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 carro.obterMarcaModelo = function() {
-  return 'Esse carro é um ' + carro.marca + ' ' + carro.modelo;
+  return 'Esse carro é um ' + carro.obterMarca() + ' ' + carro.obterModelo();
 };
 
 /*
@@ -175,5 +179,5 @@ carro.adicionarPessoas(-4); // 'Já temos 1 pessoa no carro!'
 carro.adicionarPessoas(10); // 'Só cabe mais 4 pessoas!'
 
 // Quantas pessoas temos no carro?
-carro.adicioarPessoas(0); // 'Já temos 1 pessoa no carro'
+carro.adicionarPessoas(0); // 'Já temos 1 pessoa no carro'
 ```
