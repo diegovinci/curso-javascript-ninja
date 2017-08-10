@@ -2,21 +2,20 @@
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
-var myArray = [ 10, 'John', 'Doe', true, null ];
+var myArray = [ 10, 'John', 'Doe', true, function() {} ];
 
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
 // ?
-var myFunction = function(arg) {
-    return arg;
-}
+var myFunction = function(arr) {
+    return arr;
+};
 
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-console.log( myFunction(myArray[1]) ); // John
-
+console.log( myFunction( myArray )[1] ); // John
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -28,12 +27,10 @@ function exibirElementoArray(arr, indice) {
     return arr[indice];
 }
 
-console.log( exibirElementoArray(myArray, 3) ); // true
-
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
-var anotherArray = [ 1, 'Alfreds Futterkiste', true, null, undefined ];
+var anotherArray = [ 1, 'Alfreds Futterkiste', true, [ 1, 2, 3 ], { x: 2 } ];
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
@@ -79,7 +76,7 @@ function book(bookName) {
         }, 
     };
     
-    return bookName === undefined ?  booksList : booksList[bookName];
+    return !bookName ? booksList : booksList[bookName];
 }
 
 /*
@@ -109,5 +106,5 @@ Ainda com a função acima, imprima o nome da editora de um livro qualquer, usan
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-console.log('O livro "' + bookName + '" foi publicado pela editora ' + book(bookName).editora + '.');
+console.log( 'O livro "' + bookName + '" foi publicado pela editora ' + book(bookName).editora + '.' );
 // O livro "Os 13 Porquês" foi publicado pela editora Ática.
