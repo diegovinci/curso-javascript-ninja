@@ -4,7 +4,7 @@ para começar o desafio.
 Declare uma variável chamada `championship` que receberá o nome do campeonato,
 e imprima o nome desse campeonato no console.
 */
-var championship = 'Brasileirão Série A';
+var championship = 'Campeonato Paulista';
 
 /*
 Declare uma variável chamada `teams`, que receberá um array com 5 elementos.
@@ -35,7 +35,7 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
 */
 function showTeamPosition(posicao) {
     
-    if( posicao < 0 || posicao > 5 ) {
+    if( posicao < 1 || posicao > 5 ) {
         return 'Não temos a informação do time que está nessa posição.';
     }
     
@@ -57,8 +57,7 @@ repetição "while".
 */
 var count = 20;
 while( count <= 30 ) {
-    console.log(count);
-    count++;
+    console.log(count++);
 } 
 
 /*
